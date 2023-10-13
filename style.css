@@ -42,6 +42,7 @@ nav ul li{
 }
 
 
+
 nav ul li a{
     text-decoration: none;
     color: #fff;
@@ -120,4 +121,20 @@ button{
 button:hover{
     box-shadow: inset 200px 0 0 #009688;
     cursor: pointer;
+}
+
+@media(max-width:500px){
+    .logo{
+        font-size: 20px;
+        padding-bottom: 20rem;
+    }
+
+    .nav ul li a{
+        display: block;
+        font-size: 25px;
+    }
+
+    .Content{
+        margin-top: 15rem;
+    }
 }
