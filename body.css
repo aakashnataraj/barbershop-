@@ -7,6 +7,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
+
+     /* Header */
+
 #banner{
   background:linear-gradient(rgba(0,0,0,0.2),#009688),url(./Barbershop.jpg);
   background-size: cover;
@@ -14,12 +18,16 @@
   height: 100vh;
 }
 
-.logo{
+
+
+img.logo{
   width: 140px;
   position: absolute;
   top: 4%;
-  left: 5%;
+  left: 10%;
 }
+
+
 
 .banner-text{
   color: #fff;
@@ -27,15 +35,20 @@
   padding-top: 260px;
 }
 
+
+
 .banner-text h1{
   font-size: 130px;
   font-family: 'Kaushan Script', cursive;
 }
 
+
+
 .banner-text p{
   font-size: 20px;
   font-style: italic;
 }
+
 
 button{
   width: 200px;
@@ -51,6 +64,8 @@ button{
   transition: 0.6s ease-out;
 }
 
+
+
 button:hover{
   box-shadow: inset 200px 0 0 blueviolet;
   cursor: pointer;
@@ -62,12 +77,14 @@ nav ul{
   margin-right: 20px;
 }
 
+
 nav ul li{
   display: inline-block;
   line-height: 80px;
   margin: 0 5px ;
   position: relative;
 }
+
 
 nav ul li a{
   color: whitesmoke;
@@ -78,16 +95,18 @@ nav ul li a{
   text-decoration: none;
 }
 
+
 nav ul li a::after{
   content: '';
   width: 0%;
   height: 3px;
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: -3px;
   background-color: #fff;
   transition: 0.6s ease-out;
 }
+
 
 nav ul li a:hover::after{
   width: 70%;
@@ -96,10 +115,12 @@ nav ul li a:hover::after{
   top: 3rem;
 }
 
+
 a.active{
   background: #1b9bff;
   transition: .5s;
 }
+
 
 .checkbtn{
   font-size: 30px;
@@ -111,10 +132,79 @@ a.active{
   display: none;
 }
 
+
 #check{
   display: none;
 }
 
+
+   /*Responsive Header */
+
+
+@media (max-width:952px){
+  img.logo{
+      font-size: 10px;
+  }
+
+  nav ul li a{
+      font-size: 16px;
+  }
+}
+
+
+@media (max-width:858px){
+  .checkbtn{
+      display: block;
+      position: relative;
+      top: 20px;
+  }
+
+  img.logo{
+    font-size: 15px;
+}
+
+  ul{
+      position: fixed;
+       width: 60%;
+      height: 50vh; 
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+  }
+
+  nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+      letter-spacing: 2px;
+      position: relative;
+  }
+
+  nav ul li a{
+      font-size: 20px;
+  }
+
+  nav ul li a:hover::after{
+    width: 28%;
+    position: absolute;
+    left: 35%;
+    top: 1.5rem;
+  }
+
+  #check:checked ~ ul{
+      left: 0;
+  }
+}
+
+     /* Header */
+
+
+
+
+ 
+     /* features */
 
 #feature{
   width: 100%;
@@ -178,105 +268,352 @@ a.active{
 
 .features-img img{
   width: 100%;
-  border-radius: 550px;
+  height: 100vh;
+  border-radius: 40px;
   zoom: 40%;
 }
 
-.features-img img:hover{
-  zoom: 20%;
-} 
 
 .features h1{
   text-align: left;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #009688;
+}
+
+.Features-desc{
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.feature-icon .fa-sharp{
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  line-height: 50px;
+  border-radius: 8px;
+  color: #009688;
+  border: 1px solid #009688;
+}
+
+
+.feature-icon .fa-regular{
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  line-height: 50px;
+  border-radius: 8px;
+  color: #009688;
+  border: 1px solid #009688;
 }
 
 
 
+.feature-text p{
+  padding: 0 20px;
+  text-align: initial;
+}
+
+
+   /*Responsive feature*/
+
+
+@media screen and (max-width: 770px) {
+          .title-text h1{
+            font-size: 35px;
+          }
+
+          .features{
+            flex-basis: 100%;
+          }
+
+          .features-img{
+            flex-basis: 100%;
+          
+          }
+
+          .features-img img{
+            width: 100%;
+            height: 80vh;
+          }
+}
+
+       /* features */
+
+
+  
+
+
+   /* Services */
+
+
+#Services{
+  width: 100%;
+  padding: 70px 0;
+  background: #efefef;
+}
+
+
+.Services-box{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+
+
+.single-service{
+  flex-basis: 48%;
+  text-align: center;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+}
+
+
+.single-service img{
+  width: 100%;
+  border-radius: 7px;
+}
+
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0,0,0,0.3),#009688);
+   opacity: 0;
+  transition: 1s; 
+}
+
+
+.single-service:hover .overlay{
+  opacity: 1;
+}
+
+.service-desc{
+  width: 80%;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%);
+  transition: 1s;
+}
+
+hr{
+  background: #fff;
+  height: 2px;
+  border: 0;
+  margin: 15px auto;
+  width: 60%;
+}
+
+.service-desc p{
+  font-size: 14px;
+}
+
+
+.single-service:hover .service-desc{
+  bottom: 40%;
+  opacity: 1;
+}
+
+   /* Responsive  Services*/
+
+
+@media screen and (max-width: 770px){
+      .single-service{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+      }
+
+      .service-desc p{
+        font-size: 12px;
+      }
+
+      hr{
+        margin: 5px auto;
+      }
+
+      .single-service:hover .service-desc{
+        bottom: 25% !important;
+      }
+}
+
+   /* Services */
 
 
 
 
+   /* Testimonials */
 
 
+#testImonials{
+  width: 100%;
+  padding: 70px 0;
+}
+
+.testImonials-row{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.testImonials-column{
+  flex-basis: 28%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 3px #00968814;
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+.testImonials-column p{
+  font-size: 14px;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.user img{
+  width: 45px;
+  margin-right: 20px;
+  border-radius: 3;
+}
+
+.user-info .fa-brands{
+  margin-left: 10px;
+  color: #27c0ff;
+  font-size: 20px;
+}
+
+.user-info small{
+  color: #009688;
+}
+
+.testImonials-column:hover{
+  transform: translateY(7px);
+}
 
 
+  /* Responsive  testimonials*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width:952px){
-  img.logo{
-      font-size: 10px;
-  }
-
-  nav ul li a{
-      font-size: 16px;
+@media screen and (max-width: 770px){
+  .testImonials-column{
+    flex-basis: 100%;
+    padding: 10px;
   }
 }
 
 
-@media (max-width:858px){
-  .checkbtn{
-      display: block;
-  }
+  /*  Testimonials */
 
-  img.logo{
-    font-size: 15px;
+
+
+
+  /* footer */
+
+#Footer{
+  padding: 100px 0 20px;
+  background: #efefef;
+  position: relative;
 }
 
-  ul{
-      position: fixed;
-       width: 60%;
-      height: 50vh; 
-      background: #2c3e50;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all .5s;
-  }
-
-  nav ul li{
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-      letter-spacing: 2px;
-  }
-
-  nav ul li a{
-      font-size: 20px;
-  }
-
-  nav ul li a:hover::after{
-    width: 28%;
-    position: absolute;
-    left: 35%;
-    top: 1.5rem;
-  }
-
-  #check:checked ~ ul{
-      left: 0;
-  }
+.footer-row{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+.footer-left , .footer-right{
+  flex-basis: 45%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-right{
+  text-align: right;
+}
+
+.footer-row h1{
+  margin: 10px 0;
+}
+
+.footer-row p{
+  line-height: 35px;
+}
+
+
+.footer-left .fa-regular,.footer-right .fa-solid, .fa-regular{
+            color: #009688;
+            font-size: 20px;
+            margin: 10px;
+}
+
+.footer-img{
+  max-width: 370px;
+  opacity: 0.1;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+   transform: translate(-50%,-50%);
+
+}
+
+
+
+.Social-links{
+  text-align: center;
+}
+
+.Social-links .fa-brands{
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border: 2px solid #009688;
+  line-height: 40px;
+  color: #009688;
+  margin: 40px 5px 0;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.Social-links .fa-brands:hover{
+  background-color: #009688;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+
+
+   /*  Responsive  footer */
+
+@media screen and (max-width: 770px){
+  .footer-left , .footer-right{
+    flex-basis: 100%;
+    font-size: 14px;
+  }
+
+  .footer-img{
+    top: 25%;
+  }
+
+}
+
+ /* footer */
